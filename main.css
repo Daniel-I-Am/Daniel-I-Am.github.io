@@ -69,7 +69,7 @@ header ul li {
     margin: auto;
     width: 100%;
     text-align: center;
-    border: 2px solid color: black;
+    border: 2px solid black;
     border-radius: .4em;
 }
 
@@ -110,12 +110,18 @@ header ul a:hover li {
     margin: 1em 0;
 }
 
+.mainContent .contentItem h2.title, .mainContent .contentItem p.content {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
 .mainContent .contentItem h2.title {
     margin: .5em 4rem 0 4rem;
     border: solid black .2rem;
 }
 
 .mainContent .contentItem p.content {
+    font-size: 1.1rem;
     margin: 0 4rem;
     border-left: solid black .2rem;
     border-right: solid black .2rem;
