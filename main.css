@@ -1,5 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-color:antiquewhite;
     padding: 1em 8em;
     border-radius: 1em;
+}
+
+div.mainContent {
+    display: grid;
+    grid: auto / 50% 50%;
+    margin: 1em 0;
+}
+
+div.mainContent div.contentItem h2.title {
+    margin: .5em 4rem 0 4rem;
+    border: solid black .2rem;
+}
+
+div.mainContent div.contentItem p.content {
+    margin: 0 4rem;
+    border-left: solid black .2rem;
+    border-right: solid black .2rem;
+    border-bottom: solid black .2rem;
+    border-radius: 0 0 1em .5em;
+}
+
+@media screen and (max-width: 800px) {
+    div.mainContent {
+        grid: auto / 100%;
+    }
 }
