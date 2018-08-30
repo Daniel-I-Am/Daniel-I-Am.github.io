@@ -132,6 +132,24 @@ header ul a:hover li {
     border-bottom: solid black .2rem;
     border-radius: 0 0 1em .5em;
 }
+.panel .panelItem {
+    width: 100%;
+}
+
+.panel .title {
+    font-size: 2em;
+    font-style: bold;
+}
+
+.panel .content {
+    transform-origin: top;
+    transition: transform ease-in-out 150ms;
+    transform: scaleY(0);
+}
+
+.panel input:checked ~ .content {
+    transform: scaleY(1);
+}
 
 @media screen and (max-width: 800px) {
     .mainContent {

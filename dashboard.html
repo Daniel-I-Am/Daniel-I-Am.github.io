@@ -1,0 +1,43 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src=main.js></script>
+</head>
+<body>
+    <header id=header>
+        <h1 id=title>Dashboard</h1>
+        <ul>
+            <a href=/><li>Landingspagina</li></a>
+            <a href=/profiel.html><li>Profiel</li></a>
+            <a href=/dashboard.html><li>Dashboard</li></a>
+        </ul>
+    </header>
+    <div class=panel>
+        <div panelItem>
+            <label class=title for=checkbox-studiemonitor on="Studiemonitor v" off="Studiemonitor &lt;">Studiemonitor <</label>
+            <input type="checkbox" id=checkbox-studiemonitor onload="checkboxLabelToggle(this);" onchange="checkboxLabelToggle(this);" />
+            <div class=content>
+                <p>This text should disappear</p>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+        function onScroll() {
+            console.log("scroll event")
+            if (window.scrollY>0) {
+                // set the background color of the header title to the same as the rest of the nav bar if someone scrolls down
+                document.getElementById('header').style="background-color: var(--navbar-color);"
+            } else {
+                //reset all specific styling for the header object if scrolled all the way to the top
+                document.getElementById('header').style=""
+            }
+        }
+        document.getElementsByTagName("body")[0].onscroll = function() {onScroll()};
+    </script>
+    </html>
