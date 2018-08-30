@@ -132,13 +132,35 @@ header ul a:hover li {
     border-bottom: solid black .2rem;
     border-radius: 0 0 1em .5em;
 }
-.panel .panelItem {
-    width: 100%;
+
+.panel {
+    display: grid;
+    grid: auto / 100%;
+    margin: 1em 0;
 }
 
-.panel .title {
+.panel .contentItem .title, .panel .contentItem .content {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.panel .contentItem .title {
+    margin: .5em 4rem 0 4rem;
+    padding: auto;
+    border: solid black .2rem;
     font-size: 2em;
     font-style: bold;
+    display: inline-block;
+    width: calc(calc(100% - 8.4rem) + 6px);
+}
+
+.panel .contentItem .content {
+    font-size: 1.1rem;
+    margin: 0 4rem;
+    border-left: solid black .2rem;
+    border-right: solid black .2rem;
+    border-bottom: solid black .2rem;
+    border-radius: 0 0 1em .5em;
 }
 
 .panel .content {
