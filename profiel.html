@@ -6,6 +6,12 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        .mainContent .contentItem .content li {
+            list-style: square;
+            margin-left: 1em;
+        }
+    </style>
 </head>
 <body>
     <header id=header>
@@ -16,7 +22,12 @@
             <a href=/dashboard.html><li>Dashboard</li></a>
         </ul>
     </header>
-
+    <div class=mainContent>
+        <div class=contentItem>
+            <h2 class=title>some title</h2>
+            <ul class=content><li>asdasd</li></ul>
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
     function onScroll() {
