@@ -160,12 +160,12 @@ header ul a:hover li {
     width: calc(calc(100% - 8.4rem) + 6px);
 }
 
-.panel .contentItem .titleOn {
+.panel .contentItem .titleOn::after {
   content: 'v';
   float: right;
 }
 
-.panel .contentItem .titleOff {
+.panel .contentItem .titleOff::after {
   content: '<';
   float: right;
 }

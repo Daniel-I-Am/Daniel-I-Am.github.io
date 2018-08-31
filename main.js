@@ -1,7 +1,7 @@
 function checkboxLabelToggle(obj) {
     if (obj.checked) {
-        obj.previousElementSibling.innerHTML = obj.previousElementSibling.attributes.on.value;
+        obj.previousElementSibling.attributes.class.value = obj.previousElementSibling.attributes.on.value;
     } else {
-        obj.previousElementSibling  .innerHTML = obj.previousElementSibling.attributes.off.value;
+        obj.previousElementSibling.attributes.class.value = obj.previousElementSibling.attributes.off.value;
     }
 }
