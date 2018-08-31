@@ -19,6 +19,15 @@ li {
     list-style: none;
 }
 
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 header {
     background-color: white;
     position: sticky;
@@ -148,6 +157,7 @@ header ul a:hover li {
 .panel .contentItem .title, .panel .contentItem .content {
     padding-left: .5rem;
     padding-right: .5rem;
+    width: calc(calc(100% - 8.4rem) + 6px)
 }
 
 .panel .contentItem .title {
@@ -161,13 +171,13 @@ header ul a:hover li {
 }
 
 .panel .contentItem .titleOn::after {
-  content: 'v';
-  float: right;
+    content: 'v';
+    float: right;
 }
 
 .panel .contentItem .titleOff::after {
-  content: '<';
-  float: right;
+    content: '<';
+    float: right;
 }
 
 .panel .contentItem .content {

@@ -7,6 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src=main.js></script>
+    <script>
+        var blokken = [
+            [
+                {
+                    naam: "Studieloopbaan Orientatie",
+                    cijfer: null,
+                    studiepunten: null
+                },
+                {
+                    naam: "Computer Science Basics",
+                    cijfer: null,
+                    studiepunten: null
+                },
+                {
+                    naam: "Programming Basics",
+                    cijfer: null,
+                    studiepunten: null
+                }
+            ],
+            [],
+            [],
+            []
+        ];
+    </script>
 </head>
 <body>
     <!--Header in alle bestanden-->
@@ -22,20 +46,14 @@
     <div class=panel>
         <!--Elk item in het panel gesplitst in contentItem-->
         <div class=contentItem>
-            <label class="title titleOff" for=checkbox-studiemonitor on="title titleOn" off="title titleOff"><span>Studiemonitor</span></label>
+            <label class="title titleOff unselectable" for=checkbox-studiemonitor on="title titleOn unselectable" off="title titleOff unselectable"><span>Studiemonitor</span></label>
             <input type="checkbox" id=checkbox-studiemonitor hidden="hidden" onload="checkboxLabelToggle(this);" onchange="checkboxLabelToggle(this);" />
             <div class=content>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue dolor, efficitur vitae ligula at, imperdiet pulvinar ex. Etiam aliquet ultricies lacus, vel hendrerit tortor pellentesque ac. Curabitur tincidunt, ipsum nec lacinia tincidunt, ante ante tincidunt nulla, vel congue tortor orci non sem. Phasellus cursus nec risus eu tristique. Donec id ligula et ipsum pretium bibendum mollis ut odio. Vestibulum consectetur mattis ipsum, a consectetur enim blandit quis. Aliquam lacinia tortor vitae purus consequat sagittis. Mauris blandit mi tellus, ac cursus orci auctor in. Sed eu diam in elit gravida commodo. Nam cursus tellus risus, vel congue elit consequat ac. Curabitur nec sapien tellus. Suspendisse rutrum fringilla massa. Sed dignissim nunc et nibh posuere, quis faucibus ligula venenatis.
-                    Proin ornare condimentum mi in dignissim. Sed maximus pretium neque, vitae commodo orci varius lacinia. Etiam ut est volutpat, rutrum est id, dapibus mi. Sed commodo tempor mi sit amet viverra. Curabitur dapibus ipsum dolor. Sed gravida risus nibh, ac euismod metus fermentum sed. Phasellus iaculis lacus sit amet metus malesuada interdum. Etiam commodo eu urna at lobortis. Phasellus vitae velit justo. Aenean consectetur libero id ullamcorper lobortis. Aenean volutpat arcu sit amet aliquet viverra. Vestibulum aliquam scelerisque urna, vel aliquet nulla egestas a. Donec aliquam nisi vel tincidunt laoreet. Nulla consequat pulvinar elit nec auctor. Nulla facilisi. Phasellus viverra porta turpis, et hendrerit tortor iaculis rhoncus.
-                    Curabitur laoreet ligula elit, ut vestibulum dui scelerisque ac. Suspendisse efficitur lectus lorem, eu accumsan enim placerat ut. Nullam vehicula lorem sed ornare sollicitudin. Donec ut commodo turpis. Curabitur gravida metus enim, vel rutrum sem sollicitudin eget. Donec condimentum arcu vitae risus gravida condimentum. Proin velit ante, dictum sed rutrum at, vulputate non massa. Duis et ex at turpis commodo molestie. In hac habitasse platea dictumst. Aliquam erat volutpat.
-                    Fusce porttitor volutpat arcu, nec vehicula leo auctor a. Curabitur diam lorem, interdum id tortor a, vulputate volutpat mauris. Donec dolor tortor, pulvinar vel lacus in, dignissim rhoncus tellus. Ut pretium ante vitae scelerisque luctus. Sed ultrices feugiat diam, vel blandit est imperdiet vitae. Aliquam erat volutpat. Pellentesque turpis nisl, suscipit at sapien vel, faucibus maximus risus. Donec in ex augue. Fusce sodales massa eu nulla ultricies, quis pellentesque nunc tempor. Praesent justo sem, sodales at elit at, mollis pretium risus. Cras posuere laoreet lorem, in fermentum mi facilisis ac.
-                    Curabitur placerat diam nibh, at lobortis nibh dapibus sagittis. Vivamus ut nisi magna. Fusce augue ex, mattis hendrerit volutpat et, tempus quis nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce porta lorem facilisis ultricies convallis. Duis eu mauris libero. Vestibulum dapibus turpis eu mauris laoreet blandit. 
-                </p>
+                <table id=toetsOverzicht></table> <!--Extra info toe gevoegd door JS-->
             </div>
         </div>
         <div class=contentItem>
-            <label class="title titleOff" for=checkbox-relevante-links on="title titleOn" off="title titleOff"><span>Relevante Links</span></label>
+            <label class="title titleOff unselectable" for=checkbox-relevante-links on="title titleOn unselectable" off="title titleOff unselectable"><span>Relevante Links</span></label>
             <input type="checkbox" id=checkbox-relevante-links hidden="hidden" onload="checkboxLabelToggle(this);" onchange="checkboxLabelToggle(this);" />
             <div class=content>
                 <ul>
@@ -43,13 +61,13 @@
                     <hr>
                     <li><a href="https://hz.nl/uploads/documents/Regelingen/OERS/2016-2017/Uitvoeringsregeling-2016-2017-HBO-ICT-voltijd.pdf">De Uitvoeringsregeling (UR) van de opleiding HBO-ICT</a></li>
                     <hr>
-                    <li><a href="https://learn.hz.nl/">Deze learn omgeving</a></li>
+                    <li><a href="https://learn.hz.nl/">De learn omgeving van de HZ</a></li>
                     <hr>
-                    <li><a href="https://HZ-HBO-ICT.slack.com/">De opleidings Slack</a></li>
+                    <li><a href="https://HZ-HBO-ICT.slack.com/">De Slack van de opleiding HBO-ICT</a></li>
                     <hr>
-                    <li><a href="https://apps.hz.nl/angular/studievoortgang/studiestatus">De pagina in MyHZ waarin jouw studievoortgang staat</a></li>
+                    <li><a href="https://apps.hz.nl/angular/studievoortgang/studiestatus">Studievoortgang in MyHZ</a></li>
                     <hr>
-                    <li><a href="https://github.com/HZ-HBO-ICT">De Github omgeving van de opleiding</a></li>
+                    <li><a href="https://github.com/HZ-HBO-ICT">De Github omgeving van de opleiding HBO-ICT</a></li>
                 </ul>
             </div>
         </div>
@@ -67,5 +85,30 @@
             }
         }
         document.getElementsByTagName("body")[0].onscroll = function() {onScroll()};
+
+        var toetsOverzicht = document.getElementById('toetsOverzicht')
+        var trs = 0;
+        for (i in blokken) {
+            trs = Math.max(trs, blokken[i].length)
+        }
+        toetsOverzicht.appendChild(document.createElement('tr'))
+        for (var i=0; i<blokken.length; i++) {
+            toetsOverzicht.childNodes[0].appendChild(document.createElement('th'))
+            toetsOverzicht.childNodes[0].childNodes[i].innerHTML = "Blok" + (i+1).toString()
+        }
+        for (var i=0; i<trs; i++) {
+            toetsOverzicht.appendChild(document.createElement('tr'))
+            for (var j=0; j<blokken.length; j++) {
+                toetsOverzicht.childNodes[i+1].appendChild(document.createElement('td'))
+            }
+        }
+        for (var i=0; i<blokken.length; i++) {
+            for (var j=0; j<blokken[i].length; j++) {
+                toetsOverzicht.childNodes[j+1].childNodes[i].innerHTML = blokken[i][j].naam
+                if (blokken[i][j].cijfer != null) {
+                    toetsOverzicht.childNodes[j+1].childNodes[i].innerHTML += " - " + blokken[i][j].cijfer + " (" + blokken[i][j].studiepunten + " EC)"
+                }
+            }
+        }
     </script>
     </html>
