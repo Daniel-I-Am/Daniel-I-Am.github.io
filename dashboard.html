@@ -9,6 +9,7 @@
     <script src=main.js></script>
 </head>
 <body>
+    <!--Header in alle bestanden-->
     <header id=header>
         <h1 id=title>Dashboard</h1>
         <ul>
@@ -17,7 +18,9 @@
             <a href=/dashboard.html><li>Dashboard</li></a>
         </ul>
     </header>
+    <!--Main panel-->
     <div class=panel>
+        <!--Elk item gesplits in contentItem-->
         <div class=contentItem>
             <label class="title titleOff" for=checkbox-studiemonitor on="title titleOn" off="title titleOff"><span>Studiemonitor</span></label>
             <input type="checkbox" id=checkbox-studiemonitor hidden="hidden" onload="checkboxLabelToggle(this);" onchange="checkboxLabelToggle(this);" />
