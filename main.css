@@ -145,8 +145,8 @@ header ul a:hover li {
 }
 
 .panel .contentItem .title {
-    margin: .5em 4rem 0 4rem;
-    padding: auto;
+    margin: .5rem 4rem 0 4rem;
+    padding: 0 .5rem;
     border: solid black .2rem;
     font-size: 2em;
     font-style: bold;
@@ -167,6 +167,11 @@ header ul a:hover li {
     transform-origin: top;
     transition: transform ease-in-out 150ms;
     transform: scaleY(0);
+}
+
+.panel .content * {
+    margin: 0;
+    padding: 0 .5rem;
 }
 
 .panel input:checked ~ .content {
