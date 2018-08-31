@@ -110,5 +110,12 @@
                 }
             }
         }
+
+        var panels = document.getElementsByClassName('panel');
+        if (panels != null) {
+            var panel = panels[0];
+            panel.childNodes[5].style.transform = 'translateY(' + panel.childNodes[5].previousElementSibling.childNodes[2].clientHeight + 'px)';
+            console.log('transform: translateY(' + panel.childNodes[5].previousElementSibling.childNodes[5].clientHeight + 'px)')
+        }
     </script>
     </html>

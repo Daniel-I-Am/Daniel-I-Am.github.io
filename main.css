@@ -203,7 +203,12 @@ header ul a:hover li {
 
 .panel input:checked ~ .content {
     transform: scaleY(1);
-    position: relative;
+    /*position: relative;*/
+}
+
+.panel .contentItem {
+    transition: all 150ms;
+    transform: translateY(none);
 }
 
 @media screen and (max-width: 800px) {
