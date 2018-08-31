@@ -134,9 +134,15 @@ header ul a:hover li {
 }
 
 .panel {
-    display: grid;
-    grid: auto / 100%;
+    /*display: grid;
+    grid: auto / 100%;*/
     margin: 1em 0;
+}
+
+
+
+.panel .contentItem {
+    float: top;
 }
 
 .panel .contentItem .title, .panel .contentItem .content {
@@ -155,6 +161,7 @@ header ul a:hover li {
 }
 
 .panel .contentItem .content {
+    position: absolute;
     font-size: 1.1rem;
     margin: 0 4rem;
     border-left: solid black .2rem;
@@ -176,6 +183,7 @@ header ul a:hover li {
 
 .panel input:checked ~ .content {
     transform: scaleY(1);
+    position: relative;
 }
 
 @media screen and (max-width: 800px) {
