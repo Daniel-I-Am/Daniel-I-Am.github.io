@@ -160,6 +160,16 @@ header ul a:hover li {
     width: calc(calc(100% - 8.4rem) + 6px);
 }
 
+.panel .contentItem .titleOn {
+  content: 'v';
+  float: right;
+}
+
+.panel .contentItem .titleOff {
+  content: '<';
+  float: right;
+}
+
 .panel .contentItem .content {
     position: absolute;
     font-size: 1.1rem;
