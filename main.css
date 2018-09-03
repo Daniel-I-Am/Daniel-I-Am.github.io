@@ -221,15 +221,22 @@ header ul a:hover li {
     margin-top: .2em;
 }
 
+.panel #toetsoverzicht .totaal {
+    border: solid black 2px;
+    margin: 0;
+    padding: 0;
+}
+
 .panel #toetsoverzicht .totaal p {
     grid-area: 1 / 1 / span 1 / span 4;
+    text-overflow: clip;
 }
 
 .panel #toetsoverzicht .score {
     text-align: right;
 }
 
-.\+, .\+\-, .\- {
+.\+, .\+\-, .\-, .panel #toetsoverzicht .totaal {
     border-radius: .3em;
 }
 

@@ -206,14 +206,16 @@
         }
         console.log(totalEC);
         total = makeElem('div', 'totaal');
+        var voortgang = "";
         if (totalEC < 45) {
-            total.className += " -";
+            voortgang += " -";
         } else if (totalEC < 60) {
-            total.className += " +-";
+            voortgang += " +-";
         } else {
-            total.className += " +";
+            voortgang += " +";
         }
-        total.innerHTML = "<p>Studievoortgang</p>"
+        var voortgangperc = Math.min(Math.floor(totalEC/60 * 100), 100)
+        total.innerHTML = "<p class=" + voortgang + " style=\"width: " + voortgangperc + "%;\">Studievoortgang</p>"
         toetsOverzicht.appendChild(total);
     </script>
     </html>
