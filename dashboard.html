@@ -12,17 +12,17 @@
             [
                 {
                     naam: "Studieloopbaan Orientatie",
-                    cijfer: 1,
+                    cijfer: 7,
                     maxStudiepunten: 2.5
                 },
                 {
                     naam: "Computer Science Basics",
-                    cijfer: 10,
+                    cijfer: 4,
                     maxStudiepunten: 7.5
                 },
                 {
                     naam: "Programming Basics",
-                    cijfer: 8,
+                    cijfer: 9,
                     maxStudiepunten: 5
                 }
             ],
@@ -108,7 +108,14 @@
             <label class="title titleOff unselectable" for=checkbox-studiemonitor on="title titleOn unselectable" off="title titleOff unselectable"><span>Studiemonitor</span></label>
             <input type="checkbox" id=checkbox-studiemonitor hidden="hidden" autocomplete=off onload="checkboxLabelToggle(this);" onchange="checkboxLabelToggle(this);" />
             <div class=content>
-                <div id=toetsOverzicht></div> <!--Extra info toe gevoegd door JS-->
+                <div id=toetsOverzicht>
+                    <div class=header>
+                        <p>Blok/Toetsnaam</p>
+                        <p>Maximale Studiepunten</p>
+                        <p>Behaalde Cijfer</p>
+                        <p>Behaalde Studiepunten</p>
+                    </div>
+                </div> <!--Extra info toe gevoegd door JS-->
             </div>
         </div>
         <div class=contentItem>
@@ -162,28 +169,29 @@
             return toRet;
         }
 
-        var toetsOverzicht = document.getElementById('toetsOverzicht')
+        var toetsOverzicht = document.getElementById('toetsOverzicht');
+        var totalEC = 0;
         for (blok in blokken) {
             var blokUL = makeElem('ul', 'blok');
-            var blokTitel = makeElem('li', 'titel')
-            blokTitel.innerHTML = "Blok " + (Number(blok) + 1) //0-indexed, so need to add one
-            blokUL.appendChild(blokTitel)
+            var blokTitel = makeElem('li', 'titel');
+            blokTitel.innerHTML = "Blok " + (Number(blok) + 1); //0-indexed, so need to add one
+            blokUL.appendChild(blokTitel);
             for (toets in blokken[blok]) {
                 var toetsLI = makeElem('li', 'toets');
-                var toetsNaam = makeElem('p', 'naam')
-                var toetsECMax = makeElem('p', 'maxEC')
-                var toetsScore = makeElem('p', 'score')
-                var toetsEC = makeElem('p', 'EC')
+                var toetsNaam = makeElem('p', 'naam');
+                var toetsECMax = makeElem('p', 'maxEC');
+                var toetsScore = makeElem('p', 'score');
+                var toetsEC = makeElem('p', 'EC');
                 if (blokken[blok][toets].naam != null) {
                     toetsNaam.innerHTML = blokken[blok][toets].naam;
                     if (blokken[blok][toets].maxStudiepunten != null) toetsECMax.innerHTML = "(" + blokken[blok][toets].maxStudiepunten + " EC)";
                     if (blokken[blok][toets].cijfer != null) {
-                        toetsScore.innerHTML = blokken[blok][toets].cijfer;
-                        if (blokken[blok][toets].cijfer > 5.5) {
-                            toetsScore.className += " +"
+                        toetsScore.innerHTML = blokken[blok][toets].cijfer.toFixed(1);
+                        if (blokken[blok][toets].cijfer >= 5.5) {
+                            totalEC += blokken[blok][toets].maxStudiepunten;
                             if (blokken[blok][toets].maxStudiepunten != null) toetsEC.innerHTML = "(" + blokken[blok][toets].maxStudiepunten + " EC)";
                         } else {
-                            toetsScore.className += " -"
+                            toetsLI.className += " -";
                             if (blokken[blok][toets].maxStudiepunten != null) toetsEC.innerHTML = "(0 EC)";
                         }
                     }
@@ -192,34 +200,20 @@
                 toetsLI.appendChild(toetsECMax);
                 toetsLI.appendChild(toetsScore);
                 toetsLI.appendChild(toetsEC);
-                blokUL.appendChild(toetsLI)
+                blokUL.appendChild(toetsLI);
             }
-            toetsOverzicht.appendChild(blokUL)
+            toetsOverzicht.appendChild(blokUL);
         }
-
-        /*
-        var trs = 0;
-        for (i in blokken) {
-            trs = Math.max(trs, blokken[i].length)
+        console.log(totalEC);
+        total = makeElem('div', 'totaal');
+        if (totalEC < 45) {
+            total.className += " -";
+        } else if (totalEC < 60) {
+            total.className += " +-";
+        } else {
+            total.className += " +";
         }
-        toetsOverzicht.appendChild(document.createElement('tr'))
-        for (var i=0; i<blokken.length; i++) {
-            toetsOverzicht.childNodes[0].appendChild(document.createElement('th'))
-            toetsOverzicht.childNodes[0].childNodes[i].innerHTML = "Blok" + (i+1).toString()
-        }
-        for (var i=0; i<trs; i++) {
-            toetsOverzicht.appendChild(document.createElement('tr'))
-            for (var j=0; j<blokken.length; j++) {
-                toetsOverzicht.childNodes[i+1].appendChild(document.createElement('td'))
-            }
-        }
-        for (var i=0; i<blokken.length; i++) {
-            for (var j=0; j<blokken[i].length; j++) {
-                toetsOverzicht.childNodes[j+1].childNodes[i].innerHTML = blokken[i][j].naam
-                if (blokken[i][j].cijfer != null) {
-                    toetsOverzicht.childNodes[j+1].childNodes[i].innerHTML += " - " + blokken[i][j].cijfer + " (" + blokken[i][j].studiepunten + " EC)"
-                }
-            }
-        }*/
+        total.innerHTML = "<p>Studievoortgang</p>"
+        toetsOverzicht.appendChild(total);
     </script>
     </html>
