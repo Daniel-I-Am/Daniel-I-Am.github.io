@@ -181,6 +181,7 @@
                 var toetsLI = makeElem('li', 'toets');
                 var toetsNaam = makeElem('p', 'naam');
                 var toetsECMax = makeElem('p', 'maxEC');
+                toetsECMax.style = "text-align: right;"
                 var toetsScore = makeElem('p', 'score');
                 var toetsEC = makeElem('p', 'EC');
                 if (blokken[blok][toets].naam != null) {
@@ -216,7 +217,7 @@
             voortgang += " +";
         }
         var voortgangperc = Math.min(Math.floor(totalEC/60 * 100), 100);
-        total.innerHTML = "<p id=the45mark class=unselectable>|</p><p class=\"unselectable " + voortgang + "\" style=\"width: " + voortgangperc + "%;\">Studievoortgang</p>";
+        total.innerHTML = "<p id=the45mark class=unselectable>(" + totalEC + "/60 EC)</p><p class=\"unselectable " + voortgang + "\" style=\"width: " + voortgangperc + "%;\">Studievoortgang</p>";
         toetsOverzicht.appendChild(total);
     </script>
     </html>
