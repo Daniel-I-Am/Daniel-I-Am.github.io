@@ -225,11 +225,21 @@ header ul a:hover li {
     border: solid black 2px;
     margin: 0;
     padding: 0;
+    margin-bottom: .2em;
 }
 
 .panel #toetsoverzicht .totaal p {
     grid-area: 1 / 1 / span 1 / span 4;
     text-overflow: clip;
+    padding: 0;
+    margin: 0 .5em;
+}
+
+.panel #toetsoverzicht .totaal #the45mark {
+    color: rgba(0,0,0,0);
+    border-left: solid black 2px;
+    margin-left: 75%;
+    padding: 0;
 }
 
 .panel #toetsoverzicht .score {
