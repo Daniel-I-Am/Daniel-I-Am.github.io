@@ -10,6 +10,24 @@
             box-sizing: border-box;
         }
 
+        @keyframes rotateBoxLinks {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(-5deg);
+            }
+        }
+
+        @keyframes rotateBoxRechts {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(10deg);
+            }
+        }
+
         body {
             background-color: #72fdea;
         }
@@ -26,6 +44,7 @@
             margin-left: calc(50% - 305px);
             margin-right: 5px;
             border: solid black 1px;
+            animation: 350ms ease-in-out 0s 1 rotateBoxLinks;
             transform: rotate(-5deg);
         }
 
@@ -34,6 +53,7 @@
             margin-right: calc(50% - 305px);
             margin-left: 5px;
             border: solid black 3px;
+            animation: 350ms ease-in-out 0s 1 rotateBoxRechts;
             transform: rotate(10deg);
         }
     </style>
