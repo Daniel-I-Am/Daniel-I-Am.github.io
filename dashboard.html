@@ -217,7 +217,7 @@
             voortgang += " +";
         }
         var voortgangperc = Math.min(Math.floor(totalEC/60 * 100), 100);
-        total.innerHTML = "<p id=the45mark class=unselectable>(" + totalEC + "/60 EC)</p><p class=\"unselectable " + voortgang + "\" style=\"width: " + voortgangperc + "%;\">Studievoortgang</p>";
+        total.innerHTML = "<p id=the45mark class=unselectable>(" + totalEC + "/60 EC)</p><p class=\"unselectable " + voortgang + "\" style=\"margin: 0; width: " + voortgangperc + "%;\">Studievoortgang</p>";
         toetsOverzicht.appendChild(total);
     </script>
     </html>
