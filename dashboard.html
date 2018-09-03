@@ -175,6 +175,7 @@
             var blokUL = makeElem('ul', 'blok');
             var blokTitel = makeElem('li', 'titel');
             blokTitel.innerHTML = "Blok " + (Number(blok) + 1); //0-indexed, so need to add one
+            blokUL.style = "grid: repeat(" + (Number(blokken[blok].length)+1) + ", auto) / minmax(300px, 60%) 20% repeat(2, 10%);"
             blokUL.appendChild(blokTitel);
             for (toets in blokken[blok]) {
                 var toetsLI = makeElem('li', 'toets');
