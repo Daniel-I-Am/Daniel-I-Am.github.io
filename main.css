@@ -211,6 +211,15 @@ header ul a:hover li {
     transform: translateY(none);
 }
 
+.panel #toetsoverzicht ul.blok li.toets {
+    display: grid;
+    grid: auto / minmax(300px, 50%) repeat(3, auto);
+}
+
+.\- {
+    color: red;
+}
+
 @media screen and (max-width: 800px) {
     .mainContent {
         grid: auto / 100%;

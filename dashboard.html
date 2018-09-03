@@ -13,78 +13,79 @@
                 {
                     naam: "Studieloopbaan Orientatie",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 2.5
                 },
                 {
                     naam: "Computer Science Basics",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 7.5
                 },
                 {
                     naam: "Programming Basics",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 5
                 }
             ],
             [
                 {
                     naam: "Object-oriented programming",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 10
                 },
                 {
                     naam: "Professional skills 1",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 2.5
                 },
                 {
                     naam: "HZ-Personality 2a",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 2.5
                 },
                 {
                     naam: "IT Personality 2a",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 2.5
                 }
             ],
             [
                 {
                     naam: "Framework development 1",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 5
                 },
                 {
                     naam: "Framework project 1",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 5
                 },
                 {
                     naam: "Professional skills 2",
                     cijfer: null,
-                    studiepunten: null
+                    studiepunten: null,
+                    maxStudiepunten: 2.5
                 }
             ],
             [
                 {
                     naam: "Framework development 2",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 5
                 },
                 {
                     naam: "Framework project 2",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 5
                 },
                 {
                     naam: "Professional skills 3",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 2.5
                 },
                 {
                     naam: "Professionele werkplek 1",
                     cijfer: null,
-                    studiepunten: null
+                    maxStudiepunten: 2.5
                 }
             ]
         ];
@@ -107,7 +108,7 @@
             <label class="title titleOff unselectable" for=checkbox-studiemonitor on="title titleOn unselectable" off="title titleOff unselectable"><span>Studiemonitor</span></label>
             <input type="checkbox" id=checkbox-studiemonitor hidden="hidden" autocomplete=off onload="checkboxLabelToggle(this);" onchange="checkboxLabelToggle(this);" />
             <div class=content>
-                <table id=toetsOverzicht></table> <!--Extra info toe gevoegd door JS-->
+                <div id=toetsOverzicht></div> <!--Extra info toe gevoegd door JS-->
             </div>
         </div>
         <div class=contentItem>
@@ -154,8 +155,49 @@
             }
         }
         document.getElementsByTagName("body")[0].onscroll = function() {onScroll()};
+        
+        function makeElem(tagName, className) {
+            toRet = document.createElement(tagName);
+            toRet.className = className;
+            return toRet;
+        }
 
         var toetsOverzicht = document.getElementById('toetsOverzicht')
+        for (blok in blokken) {
+            var blokUL = makeElem('ul', 'blok');
+            var blokTitel = makeElem('li', 'titel')
+            blokTitel.innerHTML = "Blok " + (Number(blok) + 1) //0-indexed, so need to add one
+            blokUL.appendChild(blokTitel)
+            for (toets in blokken[blok]) {
+                var toetsLI = makeElem('li', 'toets');
+                var toetsNaam = makeElem('p', 'naam')
+                var toetsECMax = makeElem('p', 'maxEC')
+                var toetsScore = makeElem('p', 'score')
+                var toetsEC = makeElem('p', 'EC')
+                if (blokken[blok][toets].naam != null) {
+                    toetsNaam.innerHTML = blokken[blok][toets].naam;
+                    if (blokken[blok][toets].maxStudiepunten != null) toetsECMax.innerHTML = "(" + blokken[blok][toets].maxStudiepunten + " EC)";
+                    if (blokken[blok][toets].cijfer != null) {
+                        toetsScore.innerHTML = blokken[blok][toets].cijfer;
+                        if (blokken[blok][toets].cijfer > 5.5) {
+                            toetsScore.className += " +"
+                            if (blokken[blok][toets].maxStudiepunten != null) toetsEC.innerHTML = "(" + blokken[blok][toets].maxStudiepunten + " EC)";
+                        } else {
+                            toetsScore.className += " -"
+                            if (blokken[blok][toets].maxStudiepunten != null) toetsEC.innerHTML = "(0 EC)";
+                        }
+                    }
+                }
+                toetsLI.appendChild(toetsNaam);
+                toetsLI.appendChild(toetsECMax);
+                toetsLI.appendChild(toetsScore);
+                toetsLI.appendChild(toetsEC);
+                blokUL.appendChild(toetsLI)
+            }
+            toetsOverzicht.appendChild(blokUL)
+        }
+
+        /*
         var trs = 0;
         for (i in blokken) {
             trs = Math.max(trs, blokken[i].length)
@@ -178,6 +220,6 @@
                     toetsOverzicht.childNodes[j+1].childNodes[i].innerHTML += " - " + blokken[i][j].cijfer + " (" + blokken[i][j].studiepunten + " EC)"
                 }
             }
-        }
+        }*/
     </script>
     </html>
