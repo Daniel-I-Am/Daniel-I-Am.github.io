@@ -213,7 +213,11 @@ header ul a:hover li {
 
 .panel #toetsoverzicht ul.blok li.toets {
     display: grid;
-    grid: auto / minmax(300px, 50%) repeat(3, auto);
+    grid: auto / minmax(300px, 40%) repeat(3, 20%);
+}
+
+.\+, .\- {
+    text-align: right;
 }
 
 .\- {
