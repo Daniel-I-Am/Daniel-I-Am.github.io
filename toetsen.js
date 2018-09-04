@@ -52,7 +52,6 @@ var blokken = [
         {
             naam: "Professional skills 2",
             cijfer: null,
-            studiepunten: null,
             maxStudiepunten: 2.5
         }
     ],
