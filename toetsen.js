@@ -1,3 +1,9 @@
+/*
+    every part of the year is made up of tests
+    They are laid out as a list
+    If `cijfer` (score) is undefined, nothing will be rendered to screen in dashboard.js
+*/
+
 var blokken = [
     [
         {
