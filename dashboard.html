@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src=main.js></script>
     <script>
@@ -152,7 +153,6 @@
     </body>
     <script>
         function onScroll() {
-            console.log("scroll event")
             if (window.scrollY>0) {
                 // set the background color of the header title to the same as the rest of the nav bar if someone scrolls down
                 document.getElementById('header').style="background-color: var(--navbar-color);"
