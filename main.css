@@ -231,7 +231,7 @@ header ul a:hover li {
     display: grid;
     margin-top: .2em;
 }
-
+/*
 .panel #toetsoverzicht ul.blok li.titel {
     grid-area: 1 / 1 / span 1 / span 4;
 }
@@ -239,7 +239,7 @@ header ul a:hover li {
 .panel #toetsoverzicht ul.blok li.toets {
     grid-column: 1 / 4;
 }
-
+*/
 .panel #toetsoverzicht .totaal {
     border: solid black 2px;
     margin: 0;
