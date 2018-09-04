@@ -222,17 +222,25 @@ header ul a:hover li {
     font-weight: bold;
 }
 
-z.panel #toetsoverzicht ul.blok, .panel #toetsoverzicht .header, .panel #toetsoverzicht .totaal { 
+.panel #toetsoverzicht ul.blok li.toets, .panel #toetsoverzicht .header, .panel #toetsoverzicht .totaal {
     display: grid;
     grid: auto / minmax(300px, 60%) 20% repeat(2, 10%);
     margin-top: .2em;
 }
 
-.panel #toetsoverzicht ul.blok li.toets {
-    grid-column-start: 1;
-    grid-column-end: 4;
+.panel #toetsoverzicht ul.blok {
+    display: grid;
+    margin-top: .2em;
+}
+/*
+.panel #toetsoverzicht ul.blok li.titel {
+    grid-area: 1 / 1 / span 1 / span 4;
 }
 
+.panel #toetsoverzicht ul.blok li.toets {
+    grid-column: 1 / 4;
+}
+*/
 .panel #toetsoverzicht .totaal {
     border: solid black 2px;
     margin: 0;
