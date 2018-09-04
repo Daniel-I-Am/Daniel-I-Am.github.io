@@ -1,14 +1,3 @@
-function onScroll() {
-    if (window.scrollY>0) {
-        // set the background color of the header title to the same as the rest of the nav bar if someone scrolls down
-        document.getElementById('header').style="background-color: var(--navbar-color);"
-    } else {
-        //reset all specific styling for the header object if scrolled all the way to the top
-        document.getElementById('header').style=""
-    }
-}
-document.getElementsByTagName("body")[0].onscroll = function() {onScroll()};
-
 function makeElem(tagName, className) {
     toRet = document.createElement(tagName);
     toRet.className = className;
