@@ -154,7 +154,26 @@ header ul a:hover li {
     border-left: solid black .2rem;
     border-right: solid black .2rem;
     border-bottom: solid black .2rem;
-    border-radius: 0 0 1em .5em;
+    border-radius: 0 0 1em 1em;
+}
+
+.mainContent .contentItem .imgContent {
+    display: grid;
+    grid: auto / repeat(2, auto);
+}
+
+.mainContent .contentItem .content img {
+    width: calc(100% + 1em);
+    height: auto;
+    margin: 0 -.5em;
+}
+
+.mainContent .contentItem .content img:nth-last-of-type(2) {
+    border-bottom-left-radius: 1em;
+}
+
+.mainContent .contentItem .content img:last-of-type {
+    border-bottom-right-radius: 1em;
 }
 
 .panel {
