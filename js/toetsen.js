@@ -7,7 +7,7 @@
 /*
 var blokken;
 
-fetch('../cijfers.json')
+fetch('../json/cijfers.json')
     .then(
         function(response) {
             if (response.status !== 200) {
