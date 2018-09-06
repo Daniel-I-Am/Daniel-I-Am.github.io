@@ -1,0 +1,125 @@
+.panel {
+    margin: 1em 0;
+}
+
+.panel .contentItem {
+    float: top;
+}
+
+.panel .contentItem .title, .panel .contentItem .content {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    width: calc(calc(100% - 8.4rem) + 6px)
+}
+
+.panel .contentItem .title {
+    margin: .5rem 4rem 0 4rem;
+    padding: 0 .5rem;
+    border: solid black .2rem;
+    font-size: 2em;
+    font-style: bold;
+    display: inline-block;
+    width: calc(calc(100% - 8.4rem) + 6px);
+    transition: all 150ms ease-in-out;
+}
+
+.panel .contentItem .title:hover {
+    background-color: black;
+    color: white;
+}
+
+.panel .contentItem .titleOn::after {
+    content: 'v';
+    float: right;
+}
+
+.panel .contentItem .titleOff::after {
+    content: '<';
+    float: right;
+}
+
+.panel .contentItem .content {
+    position: absolute;
+    font-size: 1.1rem;
+    margin: 0 4rem;
+    border-left: solid black .2rem;
+    border-right: solid black .2rem;
+    border-bottom: solid black .2rem;
+    border-radius: 0 0 1em .5em;
+}
+
+.panel .content {
+    transform-origin: top;
+    transition: transform ease-in-out 150ms;
+    transform: scaleY(0);
+}
+
+.panel .content * {
+    margin: 0;
+    padding: 0 .5rem;
+}
+
+.panel input:checked ~ .content {
+    transform: scaleY(1);
+}
+
+.panel .contentItem {
+    transition: all 150ms;
+    transform: translateY(none);
+}
+
+.panel #toetsoverzicht .header {
+    font-weight: bold;
+}
+
+.panel #toetsoverzicht ul.blok li.toets, .panel #toetsoverzicht .header, .panel #toetsoverzicht .totaal {
+    display: grid;
+    grid: auto / minmax(300px, 60%) 20% repeat(2, 10%);
+    margin-top: .2em;
+}
+
+.panel #toetsoverzicht ul.blok {
+    display: grid;
+    margin-top: .2em;
+}
+
+.panel #toetsoverzicht .totaal {
+    border: solid black 2px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .2em;
+}
+
+.panel #toetsoverzicht .totaal p {
+    grid-area: 1 / 1 / span 1 / span 4;
+    text-overflow: clip;
+    padding: 0;
+    margin: 0 .5em;
+}
+
+.panel #toetsoverzicht .totaal #the45mark {
+    text-align: right;
+    border-left: solid black 2px;
+    margin-left: 75%;
+    padding: 0;
+}
+
+.panel #toetsoverzicht .score {
+    text-align: right;
+}
+
+.\+, .\+\-, .\-, .panel #toetsoverzicht .totaal {
+    border-radius: .3em;
+}
+
+.\- {
+    background-color: rgba(255, 0, 0, .5);
+}
+
+.\+\- {
+    background-color: rgba(255, 255, 0, .5);
+}
+
+.\+ {
+    background-color: rgba(0, 255, 0, .5);
+}
