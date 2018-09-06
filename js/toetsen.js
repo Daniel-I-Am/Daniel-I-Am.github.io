@@ -15,16 +15,16 @@ fetch('../json/cijfers.json')
                 response.status);
                 return;
             }
-            
+
             // Examine the text in the response
             response.json().then(function(data) {
                 console.log(data)
             });
         }
     )
-.catch(function(err) {
-    console.log('Fetch Error :-S', err);
-});
+    .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+    });
 
 console.log(blokken)
 
