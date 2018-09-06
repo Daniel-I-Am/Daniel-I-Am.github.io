@@ -29,7 +29,8 @@
 }
 
 .panel .contentItem .titleOn::after {
-    content: 'v';
+    content: '<';
+    transform: rotate(-90deg);
     float: right;
 }
 

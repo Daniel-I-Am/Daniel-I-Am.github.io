@@ -18,3 +18,7 @@
     list-style: '-';
     
 }
+
+.mainContent .contentItem p {
+    margin-top: 0;
+}
