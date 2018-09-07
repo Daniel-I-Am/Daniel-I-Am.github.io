@@ -2,7 +2,7 @@
     --background-color: none;
     --text-color: black;
     --link-color: blue;
-    --header-background-color: purple;/*#73ffc0;*/
+    --header-background-color: #73ffc0;
     --header-text-color: black;
     --header-link-hover: white;
 }
