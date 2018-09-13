@@ -106,6 +106,14 @@ header ul a:hover li {
     background-color: var(--header-text-color);
 }
 
+footer.sources {
+    
+}
+
+footer.sources li {
+    list-style: disc;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
