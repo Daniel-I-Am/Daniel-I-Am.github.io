@@ -4,6 +4,7 @@ body {
     grid: auto 1fr auto / auto; /*auto / auto 1fr auto;*/
 }
 
+/* Proper layout for sections */
 header {
     grid-area: 1 / 1 / span 1 / span 1;
 }
@@ -16,6 +17,7 @@ header {
     grid-area: 3 / 1 / span 1 / span 1;
 }
 
+/* Top bar sources section */
 .sources::before {
     padding: 0;
     margin: 0;
