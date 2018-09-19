@@ -23,6 +23,6 @@ header {
     margin: 0;
     content: '';
     position: absolute;
-    width: calc(100vw - 2px);
+    width: calc(100% - 2px);
     border: 1px solid black;
 }
