@@ -13,11 +13,18 @@
     <header id=header>
         <h1 id=title>Mijn Motivatie</h1>
         <ul>
-            <a href=/><li>Landingspagina</li></a>
-            <a href=/profiel.html><li>Profiel</li></a>
-            <a href=/dashboard.html><li>Dashboard</li></a>
-            <a href=/motivatie.html><li>Mijn Motivatie</li></a>
+            <a href=./><li>Landingspagina</li></a>
+            <a href=./profiel.html><li>Profiel</li></a>
+            <a href=./dashboard.html><li>Dashboard</li></a>
+            <a href=./motivatie.html><li>Mijn Motivatie</li></a>
         </ul>
+        <select class=nav onchange="window.location.assign(this.value)">
+            <option value="." autocomplete=off hidden="hidden">Please select...</option>
+            <option value="./">Landingspagina</option>
+            <option value="./profiel.html">Profiel</option>
+            <option value="./dashboard.html">Dashboard</option>
+            <option value="./motivatie.html">Mijn Motivatie</option>
+        </select>
     </header>
     <div class=mainContent>
         <div class=contentItem style="grid-area: 1 / 1 / span 2 / span 1;">

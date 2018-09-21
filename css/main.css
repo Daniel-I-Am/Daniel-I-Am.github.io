@@ -59,7 +59,6 @@ header h1 {
 }
 
 header::before {
-    content: '';
     background-color: var(--header-background-color);
 }
 
@@ -104,10 +103,6 @@ header ul li {
 header ul a:hover li {
     color: var(--header-link-hover);
     background-color: var(--header-text-color);
-}
-
-footer.sources {
-    
 }
 
 footer.sources li {
@@ -182,6 +177,34 @@ footer.sources li {
 
 .mainContent .contentItem .content img:last-of-type {
     border-bottom-right-radius: 1em;
+}
+
+@media screen and (min-width: 1030px) {
+    header::before {
+        content: '';
+    }
+    header .nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    header ul {
+        display: none;
+    }
+    header {
+        background-color: var(--header-background-color);
+        color: var(--header-text-color);
+        grid: 6em 2em / 100%;
+    }
+    header #title {
+        grid-area: 1 / 1 / span 1 / span 1;
+        text-align: center;
+    }
+    header .nav {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    
 }
 
 @media screen and (max-width: 800px) {

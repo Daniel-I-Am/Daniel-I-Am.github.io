@@ -20,6 +20,13 @@
             <a href=/dashboard.html><li>Dashboard</li></a>
             <a href=/motivatie.html><li>Mijn Motivatie</li></a>
         </ul>
+        <select class=nav onchange="window.location.assign(this.value)">
+            <option value="." autocomplete=off hidden="hidden">Please select...</option>
+            <option value="./">Landingspagina</option>
+            <option value="./profiel.html">Profiel</option>
+            <option value="./dashboard.html">Dashboard</option>
+            <option value="./motivatie.html">Mijn Motivatie</option>
+        </select>
     </header>
     <!--container waar alle content-containers in zitten-->
     <div class=mainContent>
