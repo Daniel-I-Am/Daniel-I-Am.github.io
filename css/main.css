@@ -218,4 +218,7 @@ footer.sources li {
         grid-template-areas: 
         "l" "l" "l" "r" "r" "r" "b" "b";
     }
+    header {
+        position: relative;
+    }
 }

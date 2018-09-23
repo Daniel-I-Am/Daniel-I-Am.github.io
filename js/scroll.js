@@ -8,6 +8,11 @@ function onScroll() {
         //reset
         document.getElementById('header').style=""
     }
+
+     if (screen.width <= 800) {
+         let header = document.getElementById("header")
+         header.style.position = "relative"
+     }
 }
 //apply this to the body
 document.getElementsByTagName("body")[0].onscroll = function() {onScroll()};
