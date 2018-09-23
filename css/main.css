@@ -137,7 +137,12 @@ footer.sources li {
 
 .mainContent {
     display: grid;
-    grid: repeat(3, auto) / 50% 50%;
+    grid: repeat(4, auto) / 50% 50%;
+    grid-template-areas: 
+        "l r"
+        "l r"
+        "l r"
+        "b b";
     margin: 1em 0;
 }
 
@@ -210,5 +215,7 @@ footer.sources li {
 @media screen and (max-width: 800px) {
     .mainContent {
         grid: auto / 100%;
+        grid-template-areas: 
+        "l" "l" "l" "r" "r" "r" "b" "b";
     }
 }
