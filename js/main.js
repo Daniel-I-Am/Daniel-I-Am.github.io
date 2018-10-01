@@ -8,7 +8,7 @@ function checkboxLabelToggle(obj) {
         if (obj.parentElement.nextElementSibling != null) {
             obj.parentElement.nextElementSibling.style.transform = "translateY(" + obj.nextElementSibling.clientHeight + "px)";
         }
-    //if it is not checked now
+    //if it is not checked now 
     } else {
         //change the class to it's `off` attribute
         obj.previousElementSibling.attributes.class.value = obj.previousElementSibling.attributes.off.value;
