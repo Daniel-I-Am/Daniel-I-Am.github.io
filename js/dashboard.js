@@ -38,14 +38,16 @@ setTimeout(function() {
             if (blokken[blok][toets].naam != null) {
                 toetsNaam.innerHTML = blokken[blok][toets].naam;
                 if (blokken[blok][toets].maxStudiepunten != null) toetsECMax.innerHTML = "(" + blokken[blok][toets].maxStudiepunten + " EC)";
-                if (blokken[blok][toets].cijfer != null) {
-                    toetsScore.innerHTML = blokken[blok][toets].cijfer.toFixed(1);
-                    if (blokken[blok][toets].cijfer >= 5.5) {
+                if (blokken[blok][toets].cijfers != null) {
+                    toetsScore.innerHTML = blokken[blok][toets].cijfers.map(e => {return e || ""}).join(" ");
+                    if (blokken[blok][toets].cijfers.reduce((s, e) => {return s+e})/blokken[blok][toets].cijfers.length >= 5.5) {
                         totalEC += blokken[blok][toets].maxStudiepunten;
                         if (blokken[blok][toets].maxStudiepunten != null) toetsEC.innerHTML = "(" + blokken[blok][toets].maxStudiepunten + " EC)";
-                    } else {
+                    } else if (!blokken[blok][toets].cijfers.includes(null)) {
                         toetsLI.className += " -";
                         if (blokken[blok][toets].maxStudiepunten != null) toetsEC.innerHTML = "(0 EC)";
+                    } else if (blokken[blok][toets].cijfers.includes(null) && blokken[blok][toets].cijfers.length > 1) {
+                        toetsLI.className += " testProgress";
                     }
                 }
             }
