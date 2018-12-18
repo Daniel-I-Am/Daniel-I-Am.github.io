@@ -19,7 +19,7 @@
     [
         {
             "naam": "Object-oriented programming",
-            "cijfers": [9.8, null, null],
+            "cijfers": [9.8, null],
             "maxStudiepunten": 10
         },
         {
