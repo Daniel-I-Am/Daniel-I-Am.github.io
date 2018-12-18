@@ -2,78 +2,78 @@
     [
         {
             "naam": "Studieloopbaan Orientatie",
-            "cijfer": 8.5,
+            "cijfers": [8.5],
             "maxStudiepunten": 2.5
         },
         {
             "naam": "Computer Science Basics",
-            "cijfer": 8.8,
+            "cijfers": [8.8],
             "maxStudiepunten": 7.5
         },
         {
             "naam": "Programming Basics",
-            "cijfer": 10,
+            "cijfers": [10],
             "maxStudiepunten": 5
         }
     ],
     [
         {
             "naam": "Object-oriented programming",
-            "cijfer": null,
+            "cijfers": [9.8, null, null],
             "maxStudiepunten": 10
         },
         {
             "naam": "Professional skills 1",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 2.5
         },
         {
             "naam": "HZ-Personality 2a",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 2.5
         },
         {
             "naam": "IT Personality 2a",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 2.5
         }
     ],
     [
         {
             "naam": "Framework development 1",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 5
         },
         {
             "naam": "Framework project 1",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 5
         },
         {
             "naam": "Professional skills 2",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 2.5
         }
     ],
     [
         {
             "naam": "Framework development 2",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 5
         },
         {
             "naam": "Framework project 2",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 5
         },
         {
             "naam": "Professional skills 3",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 2.5
         },
         {
             "naam": "Professionele werkplek 1",
-            "cijfer": null,
+            "cijfers": [null],
             "maxStudiepunten": 2.5
         }
     ]
