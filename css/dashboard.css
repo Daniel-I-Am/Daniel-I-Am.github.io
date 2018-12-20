@@ -109,7 +109,7 @@
     text-align: right;
 }
 
-.\+, .\+\-, .\-, .panel #toetsoverzicht .totaal {
+.\+, .\+\-, .\-, .panel #toetsoverzicht .totaal, .testProgress {
     border-radius: .3em;
 }
 
@@ -123,6 +123,10 @@
 
 .\+ {
     background-color: rgba(0, 255, 0, .5);
+}
+
+.testProgress {
+    background-color: rgba(50, 50, 255, .5);
 }
 
 @media screen and (max-width: 1030px) {
