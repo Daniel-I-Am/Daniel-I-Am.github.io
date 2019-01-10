@@ -8,3 +8,5 @@ for (c=0; c<content.length; c++) {
         }
     }
 }
+
+document.getElementById('leeftijd').innerText = new Date().getFullYear() - 2001;
