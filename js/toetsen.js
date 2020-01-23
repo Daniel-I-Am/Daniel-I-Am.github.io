@@ -5,7 +5,7 @@
 */
 
 
-var blokken;
+var gradeData;
 
 fetch('../json/cijfers.json')
     .then(
@@ -18,7 +18,7 @@ fetch('../json/cijfers.json')
 
             // Examine the text in the response
             response.json().then(function(data) {
-                blokken = data
+                gradeData = data
             });
         }
     )
