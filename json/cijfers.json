@@ -28,11 +28,11 @@
             {"naam": "Professional Skills 4", "cijfers": [9, 9], "maxStudiepunten": 2.5},
             {"naam": "Software Design", "cijfers": [9.4], "maxStudiepunten": 5},
             {"naam": "Design Thinking", "cijfers": [9], "maxStudiepunten": 2.5},
-            {"naam": "Continuous Integration", "cijfers": [9.9], "maxStudiepunten": 2.5}
+            {"naam": "Continuous Integration", "cijfers": [9.9], "maxStudiepunten": 5}
         ],
         [
             {"naam": "Professional Skills 5", "cijfers": [9, 9], "maxStudiepunten": 2.5},
-            {"naam": "Functional Specifications", "cijfers": [8], "maxStudiepunten": 5},
+            {"naam": "Functional Specifications", "cijfers": [7.5], "maxStudiepunten": 5},
             {"naam": "LEAN Startup", "cijfers": [9.5, 8], "maxStudiepunten": 5},
             {"naam": "UX Design", "cijfers": [8], "maxStudiepunten": 2.5}
         ],
