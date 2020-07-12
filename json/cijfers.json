@@ -37,18 +37,17 @@
             {"naam": "UX Design", "cijfers": [8], "maxStudiepunten": 2.5}
         ],
         [
-            {"naam": "Professional Skills 6", "cijfers": [null], "maxStudiepunten": 2.5},
-            {"naam": "Business Services", "cijfers": [null], "maxStudiepunten": 2.5},
-            {"naam": "Security and Ethics", "cijfers": [null], "maxStudiepunten": 2.5},
-            {"naam": "Data Science Introduction 1", "cijfers": [null], "maxStudiepunten": 5},
+            {"naam": "Professional Skills 6", "cijfers": [9, 7, 9], "maxStudiepunten": 2.5},
+            {"naam": "Business Services", "cijfers": [7.9], "maxStudiepunten": 2.5},
+            {"naam": "Security and Ethics", "cijfers": [9.4, 8.4], "maxStudiepunten": 2.5},
+            {"naam": "Data Science Introduction 1", "cijfers": [8.3], "maxStudiepunten": 5},
             {"naam": "HZ-Personality 2", "cijfers": [null], "maxStudiepunten": 2.5}
         ],
         [
-            {"naam": "Professional Skills 7", "cijfers": [null], "maxStudiepunten": 2.5},
-            {"naam": "IT Personality 2", "cijfers": [null], "maxStudiepunten": 2.5},
-            {"naam": "Data Science Introduction 2", "cijfers": [null], "maxStudiepunten": 5},
-            {"naam": "Data visualization (keuze)", "cijfers": [null], "maxStudiepunten": 5},
-            {"naam": "Cloud Computing (keuze)", "cijfers": [null], "maxStudiepunten": 5}
+            {"naam": "Professional Skills 7", "cijfers": [7.4, 10], "maxStudiepunten": 2.5},
+            {"naam": "IT Personality 2", "cijfers": [8.2], "maxStudiepunten": 2.5},
+            {"naam": "Data Science Introduction 2", "cijfers": [9.5], "maxStudiepunten": 5},
+            {"naam": "Cloud Computing (keuze)", "cijfers": [9.7, 9.5], "maxStudiepunten": 5}
         ]
     ]
 }
