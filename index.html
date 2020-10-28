@@ -30,7 +30,8 @@
     <div class=mainContent>
             <div class=contentItem>
                 <h2 class=title>Achtergrond</h2>
-                <p class=content>Mijn naam is Daniel de Cloet. Ik ben, op het moment van schrijven, 17 jaar oud. Ik heb hiervoor een 
+                <p class=content>Mijn naam is Daniel de Cloet. Ik ben <span id="age"></span> jaar oud. Ik volg momenteel
+                    een opleiding aan de HZ University of Applied Sciences Ik heb hiervoor een
                     VWO/Gymnasium diploma behaald. Deze heb ik behaald in een zeer technisch vakkenpakket, of zoals ik het noem, 
                     mijn versie van een pret-pakket.</p>
             </div>
@@ -58,4 +59,7 @@
     </div>
 </body>
 <script src="./js/scroll.js"></script>
+<script>
+    document.getElementById('age').innerText = Math.abs((new Date(Date.now() - new Date(2000, 10).getTime())).getUTCFullYear() - 1970);
+</script>
 </html>
