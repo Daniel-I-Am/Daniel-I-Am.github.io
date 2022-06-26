@@ -10,24 +10,24 @@
         }, {
             "naam": "Blok 2",
             "resultaten": [
-                {"naam": "Object-oriented programming", "cijfers": [9.8, 7.8], "maxStudiepunten": 10},
-                {"naam": "Professional skills 1", "cijfers": [7.2, 8, 7.5, 6], "maxStudiepunten": 2.5},
-                {"naam": "HZ-Personality 2a", "cijfers": [7.0], "maxStudiepunten": 2.5}
+                {"naam": "Object-oriented Programming", "cijfers": [9.8, 7.8], "maxStudiepunten": 10},
+                {"naam": "Professional Skills 1", "cijfers": [7.2, 8, 7.5, 6], "maxStudiepunten": 2.5},
+                {"naam": "HZ Personality 2a", "cijfers": [7.0], "maxStudiepunten": 2.5}
             ]
         }, {
             "naam": "Blok 3",
             "resultaten": [
-                {"naam": "Framework development 1", "cijfers": [10], "maxStudiepunten": 5},
-                {"naam": "Framework project 1", "cijfers": [7.4, 7.8], "maxStudiepunten": 5},
-                {"naam": "Professional skills 2", "cijfers": [7.7, 10, 9.2], "maxStudiepunten": 2.5},
-                {"naam": "Professionele werkplek 1", "cijfers": [10], "maxStudiepunten": 2.5}
+                {"naam": "Framework Development 1", "cijfers": [10], "maxStudiepunten": 5},
+                {"naam": "Framework Project 1", "cijfers": [7.4, 7.8], "maxStudiepunten": 5},
+                {"naam": "Professional Skills 2", "cijfers": [7.7, 10, 9.2], "maxStudiepunten": 2.5},
+                {"naam": "Professionele Werkplek 1", "cijfers": [10], "maxStudiepunten": 2.5}
             ]
         }, {
             "naam": "Blok 4",
             "resultaten": [
-                {"naam": "Framework development 2", "cijfers": [8.6, 8], "maxStudiepunten": 5},
-                {"naam": "Framework project 2", "cijfers": [8.5], "maxStudiepunten": 5},
-                {"naam": "Professional skills 3", "cijfers": [8, 8.7, 10], "maxStudiepunten": 2.5},
+                {"naam": "Framework Development 2", "cijfers": [8.6, 8], "maxStudiepunten": 5},
+                {"naam": "Framework Project 2", "cijfers": [8.5], "maxStudiepunten": 5},
+                {"naam": "Professional Skills 3", "cijfers": [8, 8.7, 10], "maxStudiepunten": 2.5},
                 {"naam": "IT Personality 2a", "cijfers": [8.7], "maxStudiepunten": 2.5}
             ]
         }
@@ -36,7 +36,7 @@
         {
             "naam": "Blok 1",
             "resultaten": [
-                {"naam": "Professional Skills 4", "cijfers": [9, 9], "maxStudiepunten": 2.5},
+                {"naam": "Professional Skills 4", "cijfers": [9], "maxStudiepunten": 2.5},
                 {"naam": "Software Design", "cijfers": [9.4], "maxStudiepunten": 5},
                 {"naam": "Design Thinking", "cijfers": [9], "maxStudiepunten": 2.5},
                 {"naam": "Continuous Integration", "cijfers": [9.9], "maxStudiepunten": 5}
@@ -45,27 +45,27 @@
         {
             "naam": "Blok 2",
             "resultaten": [
-            {"naam": "Professional Skills 5", "cijfers": [9, 9], "maxStudiepunten": 2.5},
-            {"naam": "Functional Specifications", "cijfers": [7.5], "maxStudiepunten": 5},
-            {"naam": "LEAN Startup", "cijfers": [9.5, 8], "maxStudiepunten": 5},
+            {"naam": "Professional Skills 5", "cijfers": [9], "maxStudiepunten": 2.5},
+            {"naam": "Functional Specifications", "cijfers": [8], "maxStudiepunten": 5},
+            {"naam": "LEAN Startup", "cijfers": [8.9], "maxStudiepunten": 5},
             {"naam": "UX Design", "cijfers": [8], "maxStudiepunten": 2.5}
             ]
         }, {
             "naam": "Blok 3",
             "resultaten": [
-                {"naam": "Professional Skills 6", "cijfers": [9, 7, 9], "maxStudiepunten": 2.5},
+                {"naam": "Professional Skills 6", "cijfers": [8], "maxStudiepunten": 2.5},
                 {"naam": "Business Services", "cijfers": [7.9], "maxStudiepunten": 2.5},
-                {"naam": "Security and Ethics", "cijfers": [9.4, 8.4], "maxStudiepunten": 2.5},
+                {"naam": "Security and Ethics", "cijfers": [8.6], "maxStudiepunten": 2.5},
                 {"naam": "Data Science Introduction 1", "cijfers": [8.3], "maxStudiepunten": 5},
                 {"naam": "HZ-Personality 2", "cijfers": [7.0], "maxStudiepunten": 2.5}
             ]
         }, {
             "naam": "Blok 4",
             "resultaten": [
-                {"naam": "Professional Skills 7", "cijfers": [7.4, 10], "maxStudiepunten": 2.5},
+                {"naam": "Professional Skills 7", "cijfers": [8.7], "maxStudiepunten": 2.5},
                 {"naam": "IT Personality 2", "cijfers": [8.2], "maxStudiepunten": 2.5},
                 {"naam": "Data Science Introduction 2", "cijfers": [9.5], "maxStudiepunten": 5},
-                {"naam": "Cloud Computing (keuze)", "cijfers": [9.7, 9.5], "maxStudiepunten": 5}
+                {"naam": "Cloud Computing (keuze)", "cijfers": [9.6], "maxStudiepunten": 5}
             ]
         }, {
             "naam": "Stage",
