@@ -28,7 +28,7 @@ function makeElem(tagName, className) {
             if (course.maxStudiepunten != null) toetsECMax.innerHTML = "(" + course.maxStudiepunten + " EC)";
             if (course.cijfers != null) {
                 toetsScore.innerHTML = course.cijfers.map(e => {return e || ""}).join(" ");
-                if (course.cijfers.reduce((s, e) => {return s+e})/course.cijfers.length >= 5.5) {
+                if (course.cijfers.reduce((s, e) => {return s+e}, 0)/course.cijfers.length >= 5.5) {
                     totalEC += course.maxStudiepunten;
                     if (course.maxStudiepunten != null) toetsEC.innerHTML = "(" + course.maxStudiepunten + " EC)";
                 } else if (!course.cijfers.includes(null)) {
@@ -49,19 +49,19 @@ function makeElem(tagName, className) {
     }
 
     // process a block
-    const processBlock = function(block, blockNumber) {
+    const processBlock = function(block) {
         // make a ul element per part
         var blockUl = makeElem('ul', 'blok');
         // add the title element per part
         var blockTitle = makeElem('li', 'titel');
         // set innerHTML of title
-        blockTitle.innerHTML = `Blok ${blockNumber}`;
+        blockTitle.innerHTML = block.naam;
         // add styling based on amount of tests on the ul
         blockUl.style = "grid: repeat(" + (Number(block.length)+1) + ", auto) / auto;"
         // append title to ul
         blockUl.appendChild(blockTitle);
 
-        for (course of block) {
+        for (course of block.resultaten) {
             blockUl.appendChild(processCourse(course));
         }
 
@@ -71,7 +71,7 @@ function makeElem(tagName, className) {
 
     // process a phase
     const processPhase = function(phase, needsProgressbar) {
-        phase.forEach((e, i) => processBlock(e, i+1));
+        phase.forEach(e => processBlock(e));
 
         if (needsProgressbar) {
             // progress bar stuff
