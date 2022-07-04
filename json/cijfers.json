@@ -94,7 +94,7 @@
         }, {
             "naam": "Afstuderen",
             "resultaten": [
-                {"naam": "Graduation Software Engineering", "cijfers": null, "maxStudiepunten": 30}
+                {"naam": "Graduation Software Engineering", "cijfers": [8.8], "maxStudiepunten": 30}
             ]
         }
     ]
