@@ -1,65 +1,11 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Landingspagina</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-</head>
-<body>
-    <!--Header in alle bestanden-->
-    <header id=header>
-        <h1 id=title>Landingspagina</h1>
-        <ul>
-            <a href=./><li>Landingspagina</li></a>
-            <a href=./profiel.html><li>Profiel</li></a>
-            <a href=./dashboard.html><li>Dashboard</li></a>
-            <a href=./motivatie.html><li>Mijn Motivatie</li></a>
-            <a href=./beroepsbeeld.html><li>Beroepsbeeld</li></a>
-        </ul>
-        <select class=nav onchange="window.location.assign(this.value)">
-            <option value="." autocomplete=off hidden="hidden">Please select...</option>
-            <option value="./">Landingspagina</option>
-            <option value="./profiel.html">Profiel</option>
-            <option value="./dashboard.html">Dashboard</option>
-            <option value="./motivatie.html">Mijn Motivatie</option>
-            <option value="./beroepsbeeld.html">Beroepsbeeld</option>
-        </select>
-    </header>
-    <div class=mainContent>
-            <div class=contentItem>
-                <h2 class=title>Achtergrond</h2>
-                <p class=content>Mijn naam is Daniel de Cloet. Ik ben <span id="age"></span> jaar oud. Ik volg momenteel
-                    een opleiding aan de HZ University of Applied Sciences Ik heb hiervoor een
-                    VWO/Gymnasium diploma behaald. Deze heb ik behaald in een zeer technisch vakkenpakket, of zoals ik het noem, 
-                    mijn versie van een pret-pakket.</p>
-            </div>
-            <div class=contentItem style="grid-area: r">
-                <h2 class=title>Waarom de opleiding ICT</h2>
-                <p class=content>Ik ben al zeer lange tijd bezig geweest met allerlei onderdelen van de ICT wereld.<br />Hetgeen het 
-                    meeste tijd opneemt is het zijn van server admin van game servers. Ik speel MineCraft op servers, natuurlijk wel 
-                    met heel veel <span class=tooltip>mods<span class=tooltiptext><strong>Mods</strong> (short for 
-                        <strong>modifications</strong>) are anything that changes <i>MineCraft's</i> game content from what it 
-                        originally was.</i></span></span>. Natuurlijk komt er best was bij kijken, naast alles wat in de game zelf 
-                        moet gebeuren, moet ook de server onderhouden worden, moeten discord bots het doen, moet een admin-only panel 
-                        toegankelijk zijn voor de wat minder technisch aangelegde server owner, en zo voorts. Dit doe ik met heel erg veel 
-                        plezier.<br />Daarnaast heb ik ook zeer veel geprogrammeers in allerlei talen. De taal die ik het allerbeste ken 
-                        moet <a href=https://www.lua.org/>LUA</a> zijn. Daarna komen, niet noodzakelijk in volgorde van bekendheid en 
-                        vertrouwdheid, C#, welke ik heb gedaan in een game genaamd <a href="https://www.spaceengineersgame.com/"><i>Space 
-                            Engineers</i></a>, BASH and PERL, allebei een consequentie van het draaien van Linux op mijn devices, 
-                            <a href=https://getfedora.org/>Fedora</a> op mijn laptop en <a href=https://www.archlinux.org/>Arch</a> op 
-                            mijn desktop computer. Tenslotte de web-development talen, JavaScript en PHP, maar ook python, allemaal door 
-                            projecten voor en met een internationale groep vrienden.</p>
-            </div>
-            <div class=contentItem>
-                <h2 class=title>Waarom HBO</h2>
-                <p class=content>Vaak krijg ik toch de vraag "<i>Waarom heb je dan geen WO studie gedaan</i>". Het antwoord daarop is misschien simpeler dan gedacht. Er zit nog al een verschil tussen een WO en HBO studie. Voor een opleiding in de richting ICT is een HBO opleiding beter dan een WO opleiding, in mijn opzicht. Een iets minder theoretische opleiding helpt om meer <i>hands-on</i> ervaring op te bouwen. Al heb ik al best wat ervaring, meer kan nooit kwaad.</p>
-            </div>
-    </div>
-</body>
-<script src="./js/scroll.js"></script>
-<script>
-    document.getElementById('age').innerText = Math.abs((new Date(Date.now() - new Date(2000, 10).getTime())).getUTCFullYear() - 1970);
-</script>
+    <head>
+        <meta http-equiv="refresh" content="0;url=https://www.danieldecloet.nl/" />
+        <script>
+            setTimeout(() => {
+                window.location.href = "https://www.danieldecloet.nl/";
+            }, 100);
+        </script>
+    </head>
 </html>
